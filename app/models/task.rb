@@ -1,7 +1,7 @@
 class Task < ApplicationRecord
 
   before_create :set_position
-  after_destroy :update_positions
+  after_destroy :update_positions #testing
 
   def set_position
     max_postion = Task.maximum('position')
